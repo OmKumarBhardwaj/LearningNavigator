@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: learning_navigator
+  datasource:
+    name: employee
+    url: jdbc:mysql://localhost:3306/learning_navigator
+    username: root
+    password: MySql@3361
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+

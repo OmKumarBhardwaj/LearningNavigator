@@ -13,6 +13,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class Subject {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String subjectId;
     private String subjectName;
     @ManyToMany

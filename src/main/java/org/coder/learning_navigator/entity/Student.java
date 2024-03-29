@@ -1,8 +1,6 @@
 package org.coder.learning_navigator.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,11 +13,11 @@ import java.util.Set;
 @NoArgsConstructor
 public class Student {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String registrationId;
     private String name;
-    @ManyToMany(mappedBy = "students")
+    @ManyToMany(mappedBy = "registeredStudents")
     private Set<Subject> subjects;
-    @ManyToMany(mappedBy = "students")
+    @ManyToMany(mappedBy = "enrolledStudents")
     private Set<Exam> exams;
-
 }
