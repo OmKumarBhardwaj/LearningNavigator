@@ -1,5 +1,11 @@
 package org.coder.learning_navigator.service;
 
+import org.coder.learning_navigator.entity.Exam;
+import org.coder.learning_navigator.entity.Student;
+import org.coder.learning_navigator.exception.AlreadyEnrolledInExam;
+import org.coder.learning_navigator.exception.StudentNotEnrolledInSubject;
+import org.coder.learning_navigator.repository.ExamRepository;
+import org.coder.learning_navigator.repository.StudentRepository;
 import org.coder.learning_navigator.service.impl.ExamServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,20 +13,13 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.coder.learning_navigator.entity.Exam;
-import org.coder.learning_navigator.entity.Student;
-import org.coder.learning_navigator.exception.AlreadyEnrolledInExam;
-import org.coder.learning_navigator.exception.ExamNotFound;
-import org.coder.learning_navigator.exception.StudentNotEnrolledInSubject;
-import org.coder.learning_navigator.exception.StudentNotFound;
-import org.coder.learning_navigator.repository.ExamRepository;
-import org.coder.learning_navigator.repository.StudentRepository;
 
 import java.util.HashSet;
 import java.util.Optional;
 
-import static org.mockito.Mockito.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class ExamServiceImplTest {
