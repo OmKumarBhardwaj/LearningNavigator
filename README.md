@@ -57,7 +57,7 @@ Enhance your experience with our API by utilizing the provided Postman collectio
 
 - [Java JDK 17 Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/)
 - [Spring Boot Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
-- [MongoDB Documentation](https://www.mongodb.com/docs/manual/)
+- [MySQL Documentation](https://dev.mysql.com/doc/refman/8.3/en/)
 - [Maven Documentation](https://maven.apache.org/guides/index.html)
 - [REST API Best Practices](https://restfulapi.net/)
 - [Global Exception Handling in Spring Boot](https://www.baeldung.com/exception-handling-for-rest-with-spring)
