@@ -22,7 +22,7 @@ public class ExamServiceImpl implements ExamService {
     private ExamRepository examRepository;
 
     @Transactional
-    public void registerStudentForExam(String studentId, String examId) {
+    public void registerStudentForExam(Long studentId, Long examId) {
         Exam exam = examRepository.findById(examId)
                 .orElseThrow(() -> new ExamNotFound("Exam not found with id: " + examId));
 

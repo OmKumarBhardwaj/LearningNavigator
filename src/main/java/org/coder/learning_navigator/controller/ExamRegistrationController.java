@@ -16,7 +16,7 @@ public class ExamRegistrationController {
 
     @PostMapping("/exams/{examId}/register/{studentId}")
     public ResponseEntity<?> registerStudentForExam(@PathVariable String examId, @PathVariable String studentId) {
-        examService.registerStudentForExam(studentId, examId);
+        examService.registerStudentForExam(Long.parseLong(studentId), Long.parseLong(examId));
         return ResponseEntity.ok("Student registered for exam successfully.");
     }
 }
