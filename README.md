@@ -35,8 +35,9 @@ To run this project locally :-
 ```
 $ CREATE DATABASE learning_navigator;
 ```
+**Step 2** - Update the username and password in the application.yml according to the local setup
 
-**Step 2** - Run the commands in project root directory
+**Step 3** - Run the commands in project root directory
 ```
 $ mvn clean
 $ mvn install
