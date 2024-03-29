@@ -14,7 +14,7 @@ import java.util.Set;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String registrationId;
+    private Long registrationId;
     private String name;
     @ManyToMany(mappedBy = "registeredStudents")
     private Set<Subject> subjects;

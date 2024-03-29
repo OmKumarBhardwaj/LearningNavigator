@@ -14,7 +14,7 @@ import java.util.Set;
 public class Exam {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String examId;
+    private Long examId;
 
     @ManyToOne
     @JoinColumn(name = "subject_id", nullable = false)

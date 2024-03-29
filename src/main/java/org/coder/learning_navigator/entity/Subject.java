@@ -14,7 +14,7 @@ import java.util.Set;
 public class Subject {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String subjectId;
+    private Long subjectId;
     private String subjectName;
     @ManyToMany
     @JoinTable(
